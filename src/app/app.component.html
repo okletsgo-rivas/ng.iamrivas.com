@@ -1,28 +1,5 @@
 <div class="app">
-  <nav
-    class="px-0 navbar navbar-expand-md navbar-light sticky-top"
-    [class.scrolled]="!this.isTop"
-  >
-    <div class="p-0 container">
-      <span class="navbar-brand"
-        ><a href="/"><img src="./assets/images/logo.svg" alt="logo" /></a></span
-      ><button
-        aria-controls="navbar-nav"
-        type="button"
-        aria-label="Toggle navigation"
-        class="navbar-toggler collapsed"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="navbar-collapse collapse" id="navbar-nav">
-        <div class="ml-auto navbar-nav">
-          <a href="/projects" class="nav-link">projects</a
-          ><a href="/bio" class="nav-link">bio</a
-          ><a href="/resume" class="nav-link">resume</a>
-        </div>
-      </div>
-    </div>
-  </nav>
+  <app-header></app-header>
   <div class="projects container">
     <div class="filters row">
       <div
@@ -58,13 +35,6 @@
             autocomplete="off"
             value="[object Object]"
           />Design<span class="ml-2 badge badge-light">17</span></label
-        ><label class="btn btn-secondary"
-          ><input
-            name="filters"
-            type="radio"
-            autocomplete="off"
-            value="[object Object]"
-          />Video<span class="ml-2 badge badge-light">6</span></label
         >
       </div>
     </div>

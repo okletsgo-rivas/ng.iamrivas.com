@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, HostListener, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { DrupalService } from './drupal.service';
 
@@ -9,7 +9,6 @@ import { DrupalService } from './drupal.service';
 })
 export class AppComponent implements OnInit {
   title = 'iamrivas';
-  isTop = true;
   projects;
 
   constructor(private drupal: DrupalService) { }
@@ -17,15 +16,6 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.drupal.getProjects().subscribe(data => {
       this.projects = data;
-      console.log(this.projects[0])
     });
-  }
-
-  @HostListener('window:scroll', ['$event'])
-  scroll(event): void {
-    const newIsTop: boolean = window.scrollY < 100;
-    if (newIsTop !== this.isTop) {
-      this.isTop = newIsTop;
-    }
   }
 }
