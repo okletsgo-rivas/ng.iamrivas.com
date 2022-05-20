@@ -4,7 +4,7 @@ import { Component, Input, OnInit } from '@angular/core';
   selector: 'app-project-image',
   template: `
     <div
-      class="col-md-6 full child"
+      class="w-100 h-100 full"
       [style.backgroundImage]="'url(' + path + ')'"
     ></div>
   `,
