@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-import { DrupalService } from './drupal.service';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,13 +7,8 @@ import { DrupalService } from './drupal.service';
 })
 export class AppComponent implements OnInit {
   title = 'iamrivas';
-  projects;
 
-  constructor(private drupal: DrupalService) { }
+  constructor() { }
 
-  ngOnInit(): void {
-    this.drupal.getProjects().subscribe(data => {
-      this.projects = data;
-    });
-  }
+  ngOnInit(): void { }
 }

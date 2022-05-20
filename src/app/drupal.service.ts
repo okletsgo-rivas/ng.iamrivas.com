@@ -7,13 +7,11 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class DrupalService {
-  api = '//d9.iamrivas.com/json/projects';
+  api = '//d9.iamrivas.com/json/projects2';
+  origin = '//d9.iamrivas.com';
   projects;
 
   constructor(private http: HttpClient) { }
 
-  getProjects(): Observable<any> {
-
-    return this.http.get(this.api);
-  }
+  getProjects = (): Observable<any> => this.http.get(this.api);
 }
