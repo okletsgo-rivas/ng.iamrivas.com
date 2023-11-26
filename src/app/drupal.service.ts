@@ -8,8 +8,8 @@ import { IProject } from './pages/projects/project/IProject';
   providedIn: 'root'
 })
 export class DrupalService {
-  api = '//d9.iamrivas.com/json/projects2';
-  origin = '//d9.iamrivas.com';
+  api = '//d10.iamrivas.com/json/projects2';
+  origin = '//d10.iamrivas.com';
   projects: IProject[] = [];
   filteredProjects: IProject[] = [];
 
